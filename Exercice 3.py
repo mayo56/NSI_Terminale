@@ -28,7 +28,6 @@ def plus_grand_nombre(zoo: dict) -> str:
         else:
             if le_plus[1][1] < value[1]:
                 le_plus = (key, value)
-        print(le_plus)
     return le_plus[0]
 
 assert plus_grand_nombre(zoo_LaFleche) == "girafe"
@@ -36,7 +35,7 @@ assert plus_grand_nombre(zoo_Beauval) == 'écureuil'
 
 # ---------------------------
 
-def nombre_total (zoo:dict, continent:str) -> int:
+def nombre_total(zoo:dict, continent:str) -> int:
     """
     Fonction qui renvoie le nombre total d'animaux selon son continent.
     zoo: dict
@@ -51,3 +50,20 @@ def nombre_total (zoo:dict, continent:str) -> int:
 
 assert nombre_total(zoo_LaFleche, 'Afrique') == 14
 assert nombre_total(zoo_Beauval, 'Asie') == 24
+
+# ---------------------------
+
+def nombre(zoo:dict[str, tuple[str, ]], animal:str) -> int:
+    """
+    Fonction qui renvoi le nombre d'animaux demandé dans le zoo.
+    Return: int
+    Params: zoo: dict, animal: str 
+    """
+    if zoo.__contains__(animal):
+        return zoo[animal][1]
+    else:
+        return 0
+    
+assert nombre(zoo_LaFleche, 'panda') == 0
+assert nombre(zoo_Beauval, 'panda') == 2
+    
