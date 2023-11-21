@@ -8,6 +8,10 @@ class Tableau:
         return "Tableau(" + str(self.data) + ")"
 
     def push(self, index: int, element: any) -> None:
+        """
+        Ajout element à index définit
+        (Pareil que .insert() juste que je me fais chier pour rien)
+        """
         if self.is_empty():
             self.data.append(element)
         else:

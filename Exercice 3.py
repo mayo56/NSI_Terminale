@@ -66,4 +66,3 @@ def nombre(zoo:dict[str, tuple[str, ]], animal:str) -> int:
     
 assert nombre(zoo_LaFleche, 'panda') == 0
 assert nombre(zoo_Beauval, 'panda') == 2
-    
