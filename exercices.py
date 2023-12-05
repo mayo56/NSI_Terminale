@@ -79,41 +79,33 @@ def maxRec(liste: list[int]) -> int:
 # -=-=-=-=-=-=-=-=-=-
 
 # Calcul x^n où n € N et x € R
-def puissance(x, nombre) -> int:
-    return nombre * x
 
 # iterable
 def puissanceLt(x, n):
-    puiss = x
-    if n == 1:
-        return x
-    for _ in range(n - 1):
+    puiss = 1
+    for _ in range(n):
         puiss *= x
     return puiss
 
 # recursive (lé pas jolie)
-def puissanceRec(nombre, x, n, first):
-    if n == 1 and first:
-        return nombre
-    elif n == 1 and not first:
-        return nombre * x
+def puissanceRec(n,x):
+    if n==0:
+        return 1
     else:
-        if first:
-            n -= 1
-        return puissanceRec(puissance(x, nombre), x, n-1, False)
+        return puissanceRec(n-1, x)*x
 
 
 # x = randint(1,100)
 # n = randint(1,100)
 
-# print(x, n)
+# print(f"Puissance: {x}^{n}")
 # debut = timer()
 # print(puissanceLt(x, n))
 # fin = timer()
 # print("puissanceLt:", fin - debut)
 
 # debut = timer()
-# print(puissanceRec(x, x,n, True))
+# print(puissanceRec(n,x))
 # fin = timer()
 # print("puissanceRec:", fin - debut)
 
