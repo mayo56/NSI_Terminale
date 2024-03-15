@@ -12,4 +12,4 @@ def maximum_rec(tab, debut, fin):
     else:
         return y
 
-print(maximum_rec([7,4,2,1,8,5,6,3], 0, ))
+print(maximum_rec([7,4,2,1,8,5,6,3], 0, 7))
