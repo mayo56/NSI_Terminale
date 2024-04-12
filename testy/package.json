@@ -1,0 +1,24 @@
+{
+  "name": "testy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/main"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^18.20.2",
+    "prompts": "^2.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "ytdl-core": "^4.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/prompts": "^2.4.9"
+  }
+}
